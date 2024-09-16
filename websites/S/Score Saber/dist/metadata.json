@@ -1,18 +1,19 @@
 {
-  "$schema": "https://schemas.premid.app/metadata/1.3",
+  "$schema": "https://schemas.premid.app/metadata/1.5",
   "author": {
     "name": "joerkig",
     "id": "205984221859151873"
   },
   "service": "Score Saber",
   "description": {
-    "en": "Beat Sabers largest leaderboard system for custom songs"
+    "en": "Beat Sabers largest leaderboard system for custom songs",
+    "nl": "Beat Sabers grootste leaderboard systeem voor aangepaste liedjes"
   },
   "url": [
     "scoresaber.com",
     "new.scoresaber.com"
   ],
-  "version": "1.0.1",
+  "version": "1.1.3",
   "logo": "https://i.imgur.com/paPCAuE.png",
   "thumbnail": "https://i.imgur.com/Lop0qlV.jpg",
   "color": "#ffde1a",

@@ -8,7 +8,7 @@ presence.on("UpdateData", async () => {
       largeImageKey: "logo",
       startTimestamp: browsingStamp
     },
-    pathname = document.location.pathname;
+    { pathname } = document.location;
   if (pathname === "/genshin/") data.details = "Viewing the Homepage";
   else if (pathname.endsWith("/home/1")) {
     switch (document.location?.search?.substr(6)) {
@@ -65,19 +65,19 @@ presence.on("UpdateData", async () => {
         data.state = "Hot";
     }
   } else if (pathname.startsWith("/genshin/article/")) {
-    const title = document.querySelector(".mhy-article-page__title > h1")
-        .textContent,
+    const title = document.querySelector(
+        ".mhy-article-page__title > h1"
+      ).textContent,
       author = document.querySelector(
         ".mhy-article-page-author > .mhy-user-card__info > a > span"
       ).innerHTML,
       link = window.location.href;
 
     data.details = title;
-    data.state = "by: " + author;
+    data.state = `by: ${author}`;
     data.buttons = [{ label: "Visit Article", url: link }];
-  } else if (pathname.endsWith("/topic")) {
-    data.details = "Browsing topics";
-  } else if (pathname.startsWith("/genshin/topicDetail/")) {
+  } else if (pathname.endsWith("/topic")) data.details = "Browsing topics";
+  else if (pathname.startsWith("/genshin/topicDetail/")) {
     const title = document.querySelector(".mhy-topic-card__name").textContent;
 
     data.details = "Browsing topic:";
